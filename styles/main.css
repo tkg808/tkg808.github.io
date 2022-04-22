@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Karla:wght@400;600;800&display=swap');
+
 *
 {
   padding: 0;
@@ -7,7 +9,7 @@
 
 :root
 {
-  --primary: #202327;
+  --primary: #242a32;
   --secondary: #007CBE;
   --accents: #FBAF00;
   --text: #FFFFFF;
@@ -22,6 +24,18 @@ body
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1, h2, h3
+{
+  font-family: 'Karla', sans-serif;
+}
+
+p
+{
+  font-family: 'Baskervville', serif;
+  font-size: 1.2em;
+  line-height: 1.3em;
 }
 
 div.header-container
@@ -44,7 +58,7 @@ div.name-container
 div.brand-container
 {
   width: 70%;
-  padding-bottom: 0.25rem;
+  /* padding-bottom: 0.1rem; */
   display: flex;
   justify-content: center;
 }
@@ -95,12 +109,12 @@ p.about-text
 /* == Text in border effect == */
 div.border-box
 {
-  width: 100%;
+  width: 90%;
   margin-bottom: 5rem;
   position: relative;
   display: flex;
   justify-content: center;
-  border-top: 1px solid var(--secondary);
+  border-top: 2px solid var(--secondary);
 }
 
 span.title-box
@@ -125,7 +139,7 @@ section.project-container
 section.project-container div.title-container
 {
   width: 30%;
-  height: 30vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,21 +150,22 @@ section.project-container div.title-container
 div.detail-container
 {
   width: 70%;
-  height: 30vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 a.image-container
 {
+  width: 45%;
   text-align: center;
 }
 
 img.project-image
 {
-  width: 45%;
+  width: 100%;
   border-radius: 3%;
 }
 
@@ -158,12 +173,6 @@ p.project-text
 {
   width: 75%;
   text-align: center;
-}
-
-a
-{
-  text-decoration: none;
-  color: var(--secondary);
 }
 
 footer.footer-container
@@ -197,6 +206,12 @@ img:hover
 {
   cursor: pointer;
   box-shadow: 0 0 1.2rem var(--accents);
+}
+
+a
+{
+  text-decoration: none;
+  color: var(--secondary);
 }
 
 a.text-link:hover
@@ -239,9 +254,14 @@ a.icon-link:hover
     align-items: center;
   }
 
-  img.project-image
+  a.image-container
   {
     width: 60%;
+  }
+
+  img.project-image
+  {
+    width: 100%;
   }
 
   p.project-text
