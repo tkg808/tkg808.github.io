@@ -15,7 +15,8 @@
 
 body
 {
-  padding-bottom: 2rem;
+  min-width: 375px;
+  padding-bottom: 5rem;
   background-color: var(--primary);
   color: var(--text);
   display: flex;
@@ -27,11 +28,25 @@ div.header-container
 {
   width: 90%;
   height: 10vh;
+  margin-bottom: 5rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: 2px solid var(--secondary);
+}
+
+div.name-container
+{
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+div.brand-container
+{
+  width: 70%;
+  padding-bottom: 0.25rem;
+  display: flex;
+  justify-content: center;
 }
 
 div.main-container
@@ -47,6 +62,7 @@ section.about-container
 {
   width: 100%;
   height: 30vh;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +81,7 @@ section.about-container div.title-container
 section.about-container div.text-container
 {
   width: 70%;
-  height: 30vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,11 +92,11 @@ p.about-text
   width: 75%;
 }
 
-/* Text in border effect */
+/* == Text in border effect == */
 div.border-box
 {
   width: 100%;
-  margin-bottom: 3em;
+  margin-bottom: 5rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -89,18 +105,18 @@ div.border-box
 
 span.title-box
 {
-  padding: 0 1rem;
+  padding: 0 2rem;
   position: absolute;
   top: -1.2rem;
   background-color: var(--primary);
 }
-/* End effect */
 
+/* == Project List == */
 section.project-container
 {
   width: 100%;
-  height: 30vh;
-  margin-bottom: 4rem;
+  height: 40vh;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,6 +129,7 @@ section.project-container div.title-container
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-right: 1px solid var(--secondary);
 }
 
@@ -121,18 +138,26 @@ div.detail-container
   width: 70%;
   height: 30vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+a.image-container
+{
+  text-align: center;
 }
 
 img.project-image
 {
-  width: 40%;
+  width: 45%;
+  border-radius: 3%;
 }
 
 p.project-text
 {
-  width: 40%;
+  width: 75%;
+  text-align: center;
 }
 
 a
@@ -140,8 +165,6 @@ a
   text-decoration: none;
   color: var(--secondary);
 }
-
-
 
 footer.footer-container
 {
@@ -165,3 +188,65 @@ div.icon-container
   gap: 20px;
 }
 
+div.icon-container a
+{
+  color: var(--text);
+}
+
+img:hover
+{
+  cursor: pointer;
+  box-shadow: 0 0 1.2rem var(--accents);
+}
+
+a.text-link:hover
+{
+  color: var(--accents);
+}
+
+a.icon-link:hover
+{
+  box-shadow: 0 0 1.2rem var(--accents);
+  color: var(--accents);
+}
+
+@media only screen and (max-width: 595px)
+{
+  section.project-container
+  {
+    height: 60vh;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  section.project-container div.title-container
+  {
+    width: 50%;
+    height: 10vh;
+    border-right: 0;
+    border-top: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+  }
+
+  div.detail-container
+  {
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  img.project-image
+  {
+    width: 60%;
+  }
+
+  p.project-text
+  {
+    width: 100%;
+    text-align: center;
+  }
+}

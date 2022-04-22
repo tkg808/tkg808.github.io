@@ -20,8 +20,14 @@
 
 <body>
   <div class="header-container">
-    <h1 class="name">Tyson Gomes</h1>
-    <!-- <p class="brand">Solution in hand, you in mind.</p> -->
+    <div class="name-container">
+      <h1 class="name">Tyson Gomes</h1>
+    </div>
+    <div class="brand-container">
+      <p class="brand">
+        Solution in hand, you in mind.
+      </p>
+    </div>
   </div>
 
   <div class="main-container">
@@ -44,36 +50,41 @@
       </span>
     </div>
 
-
-
     <section class="project-container">
       <div class="title-container">
         <h2 class="project-title">FitKick</h2>
       </div>
 
       <div class="detail-container">
-        <img class="project-image" src="https://tinyimg.io/i/JwKp1AF.png" alt="">
+        <a href="https://fitkick.netlify.app/" target=”_blank” rel=”noopener noreferrer” class="image-container">
+          <img class="project-image" src="https://tinyimg.io/i/JwKp1AF.png" alt="project">
+        </a>
 
         <p class="project-text">
           Working out can be hard enough as it is, but figuring out what to do for a workout doesn't have to be. Built
-          with React
-          and Django. Further documentation
-          <a href="https://github.com/tkg808/fitkick-ui" target=”_blank” rel=”noopener noreferrer”>here</a>.
+          with React.js, Postgres, and Python. Further documentation
+          <a href="https://github.com/tkg808/fitkick-ui" target=”_blank” rel=”noopener noreferrer”
+            class="text-link">here</a>.
         </p>
       </div>
     </section>
 
     <section class="project-container">
       <div class="title-container">
-        <h2 class="project-title">Nutrition Tracker</h2>
+        <h2 class="project-title">Nutrition<br>Tracker</h2>
       </div>
 
       <div class="detail-container">
-        <img class="project-image" src="https://tinyimg.io/i/5owLoWv.png" alt="">
+        <a href="https://nutrition-tracker.netlify.app/" target=”_blank” rel=”noopener noreferrer”
+          class="image-container">
+          <img class="project-image" id="nutrition" src="https://tinyimg.io/i/5owLoWv.png" alt="project">
+        </a>
 
         <p class="project-text">
-          Figure out what your body needs and take control of what you feed it. Further documentation
-          <a href="https://github.com/tkg808/Nutrition-Tracker" target=”_blank” rel=”noopener noreferrer”>here</a>.
+          Know what your body needs and what you are fueling it with. Built with React.js using CalorieNinjas
+          API. Further documentation
+          <a href="https://github.com/tkg808/Nutrition-Tracker" target=”_blank” rel=”noopener noreferrer”
+            class="text-link">here</a>.
         </p>
       </div>
     </section>
@@ -83,10 +94,19 @@
     <div class="footer-text">
       <p>© 2022</p>
     </div>
+
     <div class="icon-container">
-      <i class="fa-brands fa-github fa-xl"></i>
-      <i class="fa-brands fa-linkedin fa-xl"></i>
-      <i class="fa-solid fa-envelope fa-xl"></i>
+      <a href="https://github.com/tkg808" target=”_blank” rel=”noopener noreferrer” class="icon-link">
+        <i class="fa-brands fa-github fa-xl"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/tysonkgomes/" target=”_blank” rel=”noopener noreferrer” class="icon-link">
+        <i class="fa-brands fa-linkedin fa-xl"></i>
+      </a>
+
+      <a href="" target=”_blank” rel=”noopener noreferrer” class="icon-link">
+        <i class="fa-solid fa-envelope fa-xl"></i>
+      </a>
     </div>
   </footer>
 </body>
