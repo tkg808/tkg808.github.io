@@ -306,6 +306,17 @@ div.tooltip:before {
     line-height: 2em;
   }
 
+  div.landing-name-container
+  {
+    width: 50%;
+  }
+
+  p.brand
+  {
+    width: 50%;
+    min-width: 200px;
+  }
+
   section.project-container
   {
     flex-direction: column;
