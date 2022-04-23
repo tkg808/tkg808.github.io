@@ -20,13 +20,17 @@
 
 <body>
   <header class="header-container">
-    <div class="header-name-container">
+    <a href="#landing" class="header-name-container current" id="landing-link">
       <h1 class="header-name">Tyson Gomes</h1>
+    </a>
+    <div class="nav-container">
+      <a href="#about" class="nav-link" id="about-link">About</a>
+      <a href="#work" class="nav-link" id="work-link">Work</a>
     </div>
   </header>
 
   <div class="main-container">
-    <section class="page-container landing-container">
+    <section class="page-container landing-container" id="landing">
       <div class="landing-name-container">
         <h1 class="landing-name">Tyson Gomes</h1>
       </div>
@@ -38,7 +42,7 @@
       </div>
     </section>
 
-    <div class="border-box">
+    <div class="border-box" id="about">
       <span class="title-box">
         <h2 class="section-header">About Me</h2>
       </span>
@@ -57,7 +61,7 @@
       </div>
     </section>
 
-    <div class="border-box">
+    <div class="border-box" id="work">
       <span class="title-box">
         <h2 class="section-header">Featured Work</h2>
       </span>

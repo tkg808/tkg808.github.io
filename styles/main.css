@@ -45,20 +45,51 @@ header.header-container
 {
   width: 90%;
   height: 10vh;
-  padding-left: 10px;
+  padding-left: 1rem;
   z-index: 1;
   position: fixed;
   top: 0;
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   background-color: var(--primary);
   border-bottom: 2px solid var(--secondary);
 }
 
-div.header-name-container
+a.header-name-container
 {
-  width: 50%;
-  /* display: none; */
+  width: 40%;
+  font-size: 1.25em;
+  color: var(--text);
+}
+
+div.nav-container
+{
+  padding-right: 2rem;
+  padding-bottom: 2px;
+  display: flex;
+  gap: 2rem;
+}
+
+a.nav-link
+{
+  font-size: 1.75em;
+  color: var(--text);
+}
+
+/* Header name and animation */
+
+a.header-name-container
+{
+  opacity: 0;
+  transform: translateY(5px);
+  transition: 0.5s all ease;
+}
+
+a.header-name-container.active
+{
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* All main */
@@ -92,7 +123,7 @@ section.landing-container
 
 h1.landing-name
 {
-  font-size: 4em;font-size: 4em;
+  font-size: 4em;
   letter-spacing: -3px;
 }
 
@@ -269,7 +300,7 @@ div.tooltip:before {
     height: 12vh;
   }
 
-  div.header-name-container
+  a.header-name-container
   {
     width: 35%;
     line-height: 2em;
