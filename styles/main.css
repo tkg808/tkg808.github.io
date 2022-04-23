@@ -45,6 +45,7 @@ header.header-container
 {
   width: 90%;
   height: 10vh;
+  padding-left: 10px;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -56,7 +57,7 @@ header.header-container
 
 div.header-name-container
 {
-  width: 30%;
+  width: 50%;
   /* display: none; */
 }
 
@@ -263,12 +264,22 @@ div.tooltip:before {
 /* For smaller screens */
 @media only screen and (max-width: 595px)
 {
+  header.header-container
+  {
+    height: 12vh;
+  }
+
+  div.header-name-container
+  {
+    width: 35%;
+    line-height: 2em;
+  }
+
   section.project-container
   {
-    height: 60vh;
-    margin-bottom: 2rem;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1rem;
   }
 
   section.project-container div.title-container
@@ -282,12 +293,11 @@ div.tooltip:before {
 
   div.detail-container
   {
-    width: 80%;
-    height: 40vh;
+    width: 90%;
+    height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
   }
 
   a.image-container
