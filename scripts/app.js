@@ -23,7 +23,7 @@ function copyToClipboard()
 {
   const emailEl = document.getElementById("email-icon");
 
-  // Copy to clipboard.
+  // Copy argument to clipboard.
   navigator.clipboard.writeText("tgomes808@yahoo.com");
 
   createTooltip(emailEl);
@@ -31,26 +31,18 @@ function copyToClipboard()
   setTimeout(() => document.querySelector(".tooltip").remove(), 2000);
 }
 
+// Header name animation.
 function toggleName()
 {
   const headerNameEl = document.getElementsByClassName("header-name-container")[0];
   const landingNameEl = document.getElementsByClassName("landing-name-container")[0];
 
-  // console.log(headerNameEl.getBoundingClientRect());
-  // console.log(landingNameEl.getBoundingClientRect());
-
-  // const windowHeight = window.innerHeight;
   const landingNameTop = landingNameEl.getBoundingClientRect().top;
 
   // Height of landingNameTop when headerNameEl should be visible.
-  if (landingNameTop <= 0)
-  {
-    headerNameEl.classList.add("active");
-  }
-  else
-  {
-    headerNameEl.classList.remove("active");
-  }
+  (landingNameTop <= 0 ?
+    headerNameEl.classList.add("active") :
+    headerNameEl.classList.remove("active"));
 }
 
 /* == Listeners == */
