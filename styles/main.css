@@ -18,7 +18,7 @@
 body
 {
   min-width: 375px;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
   background-color: var(--primary);
   color: var(--text);
   display: flex;
@@ -29,6 +29,7 @@ body
 h1, h2, h3
 {
   font-family: 'Karla', sans-serif;
+  font-weight: 400;
 }
 
 p
@@ -38,30 +39,28 @@ p
   line-height: 1.3em;
 }
 
-div.header-container
+/* Header */
+
+header.header-container
 {
   width: 90%;
   height: 10vh;
-  margin-bottom: 5rem;
+  z-index: 1;
+  position: fixed;
+  top: 0;
   display: flex;
   align-items: flex-end;
+  background-color: var(--primary);
   border-bottom: 2px solid var(--secondary);
 }
 
-div.name-container
+div.header-name-container
 {
   width: 30%;
-  display: flex;
-  justify-content: center;
+  /* display: none; */
 }
 
-div.brand-container
-{
-  width: 70%;
-  /* padding-bottom: 0.1rem; */
-  display: flex;
-  justify-content: center;
-}
+/* All main */
 
 div.main-container
 {
@@ -72,45 +71,40 @@ div.main-container
   align-items: center;
 }
 
-section.about-container
+section.page-container
 {
   width: 100%;
-  height: 30vh;
-  margin-bottom: 5rem;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section.about-container div.title-container
+/* First page */
+
+section.landing-container
 {
-  width: 30%;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid var(--secondary);
+  width: 80%;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-section.about-container div.text-container
+h1.landing-name
 {
-  width: 70%;
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 4em;font-size: 4em;
+  letter-spacing: -3px;
 }
 
-p.about-text
+div.brand-container
 {
-  width: 75%;
+  padding-left: 5px;
+  letter-spacing: 3px;
 }
 
 /* == Text in border effect == */
 div.border-box
 {
   width: 90%;
-  margin-bottom: 5rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -125,21 +119,18 @@ span.title-box
   background-color: var(--primary);
 }
 
-/* == Project List == */
-section.project-container
+h2.section-header
 {
-  width: 100%;
-  height: 40vh;
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 2.25em;
 }
 
-section.project-container div.title-container
+/* Second page */
+/* Default for all pages */
+
+div.title-container
 {
   width: 30%;
-  height: 20vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,20 +138,37 @@ section.project-container div.title-container
   border-right: 1px solid var(--secondary);
 }
 
+h2.section-title
+{
+  font-size: 1.75em;
+}
+
 div.detail-container
 {
   width: 70%;
-  height: 40vh;
+  height: 50vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+p.summary-text
+{
+  width: 80%;
+}
+
+/* == Project List == */
+
+div.detail-container
+{
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 a.image-container
 {
-  width: 45%;
-  text-align: center;
+  width: 50%;
 }
 
 img.project-image
@@ -172,13 +180,12 @@ img.project-image
 p.project-text
 {
   width: 75%;
-  text-align: center;
 }
 
 footer.footer-container
 {
   width: 90%;
-  height: 6vh;
+  height: 7vh;
   position: fixed;
   bottom: 0;
   background-color: var(--primary);
@@ -230,7 +237,7 @@ a.icon-link:hover
 div.tooltip
 {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 8rem;
   padding: 0.5rem;
   background-color: var(--accents);
@@ -296,6 +303,5 @@ div.tooltip:before {
   p.project-text
   {
     width: 100%;
-    text-align: center;
   }
 }
