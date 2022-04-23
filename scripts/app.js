@@ -1,12 +1,3 @@
-/* == Variables == */
-
-// const landingPage = document.getElementById("landing").getBoundingClientRect();
-// const aboutPage = document.getElementById("about").getBoundingClientRect();
-// const workPage = document.getElementById("work").getBoundingClientRect();
-// console.log(landingPage);
-// console.log(aboutPage);
-// console.log(workPage);
-
 /* == Functions == */
 
 function createTooltip(link)
@@ -68,50 +59,15 @@ window.addEventListener("scroll", toggleName);
 
 /* == Operations == */
 
-let pages = [];
-pages.push(document.getElementById("landing"));
-pages.push(document.getElementById("about"));
-pages.push(document.getElementById("work"));
-console.log(pages);
-
-let menu = [];
-menu.push(document.getElementById("landing-link"));
-menu.push(document.getElementById("about-link"));
-menu.push(document.getElementById("work-link"));
-console.log(menu);
-
-window.onscroll = () =>
+// Applies smooth scroll behavior to all nav-links.
+document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
 {
-  pages.forEach((page) =>
+  anchor.addEventListener('click', function (event)
   {
+    event.preventDefault();
 
-    let top = window.scrollY;
-    let offset = page.offsetTop - 150;
-    let height = page.offsetHeight;
-    let id = page.getAttribute("id");
-    console.log(id);
-
-    if (top >= offset && top < offset + height)
-    {
-      menu.forEach((link) =>
-      {
-        console.log(link);
-        link.classList.remove("current");
-        if (id === "landing")
-        {
-          document
-            .querySelector(`header a[href*="${id}"]`)
-            .classList.add("current");
-        }
-        else
-        {
-          document
-            .querySelector(`header div a[href*="${id}"]`)
-            .classList.add("current");
-        }
-      });
-    }
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
   });
-};
-
-console.log(document.getElementById("about").getBoundingClientRect());
+});
