@@ -35,7 +35,7 @@ h1, h2, h3
 p
 {
   font-family: 'Baskervville', serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.3em;
 }
 
@@ -178,7 +178,7 @@ h2.section-title
 div.detail-container
 {
   width: 70%;
-  height: 50vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +187,7 @@ div.detail-container
 
 img.photo-image
 {
-  width: 40%;
+  width: 25%;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
@@ -349,7 +349,7 @@ div.tooltip:before {
 
   div.detail-container
   {
-    width: 90%;
+    width: 100%;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -367,6 +367,17 @@ div.tooltip:before {
   }
 
   p.project-text
+  {
+    width: 100%;
+  }
+
+  img.photo-image
+  {
+    width: 35%;
+    margin-bottom: 1rem;
+  }
+
+  p.summary-text
   {
     width: 100%;
   }
