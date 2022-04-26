@@ -1,11 +1,11 @@
 /* == Functions == */
 
-function createTooltip(link)
+function createTooltip(link, text)
 {
   const tooltipEl = document.createElement("div");
   tooltipEl.className = 'tooltip';
 
-  tooltipEl.appendChild(document.createTextNode("Email copied to clipboard!"));
+  tooltipEl.appendChild(document.createTextNode(text));
 
   const firstChild = document.body.firstChild;
 
@@ -26,7 +26,7 @@ function copyToClipboard()
   // Copy argument to clipboard.
   navigator.clipboard.writeText("tgomes808@yahoo.com");
 
-  createTooltip(emailEl);
+  createTooltip(emailEl, "Email copied to clipboard!");
 
   setTimeout(() => document.querySelector(".tooltip").remove(), 2000);
 }
@@ -45,10 +45,6 @@ function toggleName()
     headerNameEl.classList.remove("active"));
 }
 
-/* == Listeners == */
-
-window.addEventListener("scroll", toggleName);
-
 /* == Operations == */
 
 // Applies smooth scroll behavior to all nav-links.
@@ -63,3 +59,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
     });
   });
 });
+
+/* == Listeners == */
+
+window.addEventListener("scroll", toggleName);
+console.log(document.links);

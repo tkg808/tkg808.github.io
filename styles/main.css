@@ -254,6 +254,11 @@ img.project-image:hover
   box-shadow: 0 0 1.2rem var(--accents);
 }
 
+div.footer-text p
+{
+  font-size: 1.3em;
+}
+
 a
 {
   text-decoration: none;
@@ -294,10 +299,9 @@ div.tooltip:before {
   border-right: 10px solid transparent;
   border-top: 10px solid var(--accents);
   position: absolute;
-  bottom:-5px;
-  left:5px;
+  bottom: -5px;
+  left: 5px;
 }
-
 
 /* For smaller screens */
 @media only screen and (max-width: 595px)
