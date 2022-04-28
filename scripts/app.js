@@ -1,12 +1,12 @@
 /* == Functions == */
 
+// On click and hover.
 function createTooltip(link, text)
 {
   const tooltipEl = document.createElement("div");
   tooltipEl.className = 'tooltip';
 
   tooltipEl.appendChild(document.createTextNode(text));
-
   const firstChild = document.body.firstChild;
 
   firstChild.parentNode.insertBefore(tooltipEl, firstChild);
@@ -17,16 +17,20 @@ function createTooltip(link, text)
   const tooltipProps = tooltipEl.getBoundingClientRect();
   const topPos = linkProps.top - (tooltipProps.height + padding);
   tooltipEl.setAttribute('style', `top:${topPos}px;left:${linkProps.left}px;`);
+
+  link.addEventListener('mouseout', () =>
+  {
+    document.querySelector(".tooltip").remove();
+  });
 }
 
-function copyToClipboard()
+// On click.
+function copyToClipboard(element, info)
 {
-  const emailEl = document.getElementById("email-icon");
-
   // Copy argument to clipboard.
-  navigator.clipboard.writeText("tgomes808@yahoo.com");
+  navigator.clipboard.writeText(info);
 
-  createTooltip(emailEl, "Email copied to clipboard!");
+  createTooltip(element, "Copied to clipboard!");
 
   setTimeout(() => document.querySelector(".tooltip").remove(), 2000);
 }
@@ -60,7 +64,25 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) =>
   });
 });
 
+document.querySelectorAll('footer a').forEach((icon) =>
+{
+  icon.addEventListener('mouseover', () =>
+  {
+    createTooltip(icon, icon.getAttribute('hoverTip'));
+  });
+
+  if (icon.hasAttribute('id'))
+  {
+    icon.addEventListener('click', () =>
+    {
+      // Removes hover tip before showing click tip.
+      document.querySelector('.tooltip').remove();
+
+      copyToClipboard(icon, icon.getAttribute('hoverTip'));
+    });
+  }
+});
+
 /* == Listeners == */
 
 window.addEventListener("scroll", toggleName);
-console.log(document.links);
