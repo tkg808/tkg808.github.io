@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  },
+  "name": "apr-2022",
+  "description": "April 2022.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkg808/tkg808.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkg808/tkg808.github.io/issues"
+  },
+  "homepage": "https://github.com/tkg808/tkg808.github.io#readme"
+}
