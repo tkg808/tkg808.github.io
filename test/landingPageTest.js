@@ -1,4 +1,4 @@
-const { Builder, By, Key } = require("selenium-webdriver");
+const { Builder, By } = require("selenium-webdriver");
 const should = require("chai").should();
 
 describe("landing container renders", function ()
