@@ -1,15 +1,16 @@
 {
   "dependencies": {
     "chai": "^4.3.6",
-    "mocha": "^10.0.0"
+    "chromedriver": "^103.0.0",
+    "mocha": "^10.0.0",
+    "selenium-webdriver": "^4.3.1"
   },
   "name": "apr-2022",
   "description": "April 2022.",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --no-timeouts"
   },
   "repository": {
     "type": "git",
