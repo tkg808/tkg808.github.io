@@ -1,9 +1,9 @@
 const { Builder, By } = require("selenium-webdriver");
 const should = require("chai").should();
 
-describe("landing container renders", function ()
+describe("landing page renders", function ()
 {
-  it("successfully renders landing container", async function ()
+  it("successfully renders landing page", async function ()
   {
     const driver = await new Builder().forBrowser("chrome").build();
 
