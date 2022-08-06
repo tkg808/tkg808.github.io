@@ -49,6 +49,20 @@ function toggleName()
     headerNameEl.classList.remove("active"));
 }
 
+// highlights an icon by toggling it's color and vertical position
+function highlightIcon(icon)
+{
+  icon.style.transition = "color 500ms ease, margin-bottom 500ms ease-in-out";
+  icon.style.color = "#FBAF00";
+  icon.style.marginBottom = "20px";
+  setTimeout(() => 
+  {
+    icon.style.color = "";
+    icon.style.marginBottom = "0px";
+    setTimeout(() => icon.style.transition = "", 500)
+  }, 500);
+}
+
 /* == Operations == */
 
 // Applies smooth scroll behavior to all nav-links.
@@ -86,3 +100,13 @@ document.querySelectorAll('footer a').forEach((icon) =>
 /* == Listeners == */
 
 window.addEventListener("scroll", toggleName);
+
+document.getElementById("contact-link").addEventListener("click", () =>
+{
+  let icons = document.getElementsByClassName("icon");
+
+  for (let i = 0; i < icons.length; i++)
+  {
+    setTimeout(() => highlightIcon(icons[i]), (i + 1) * 250);
+  }
+});
