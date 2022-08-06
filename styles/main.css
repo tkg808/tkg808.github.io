@@ -46,7 +46,7 @@ header.header-container
   width: 90%;
   height: 10vh;
   padding-left: 1rem;
-  z-index: 1;
+  z-index: 10;
   position: fixed;
   top: 0;
   display: flex;
@@ -61,6 +61,11 @@ a.header-name-container
   width: 50%;
   font-size: 1.25em;
   color: var(--text);
+}
+
+div.bars-icon-container
+{
+  display: none;
 }
 
 div.nav-container
@@ -321,9 +326,24 @@ div.tooltip:before {
 
   div.nav-container
   {
-    padding-right: 10px;
-    padding-bottom: 0;
-    gap: 10px;
+    position: absolute;
+    padding: 1rem 0 0 0;
+    top: 130px;
+    right: -125px;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  div.nav-container a
+  {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  div.bars-icon-container
+  {
+    z-index: 5;
+    display: block;
   }
 
   div.landing-name-container
