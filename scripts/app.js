@@ -110,3 +110,12 @@ document.getElementById("contact-link").addEventListener("click", () =>
     setTimeout(() => highlightIcon(icons[i]), (i + 1) * 250);
   }
 });
+
+document.getElementById("dropdown-icon").addEventListener("click", () =>
+{
+  let dropdownNav = document.getElementById("nav-container");
+
+  dropdownNav.style.right = dropdownNav.style.right === "0px" ?
+    "-125px" :
+    "0px";
+});

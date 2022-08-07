@@ -324,7 +324,7 @@ div.tooltip:before {
     line-height: 2em;
   }
 
-  div.nav-container
+  div#nav-container
   {
     position: absolute;
     padding: 1rem 0 0 0;
@@ -332,6 +332,7 @@ div.tooltip:before {
     right: -125px;
     gap: 1rem;
     flex-direction: column;
+    transition: right 1s ease-out;
   }
 
   div.nav-container a
